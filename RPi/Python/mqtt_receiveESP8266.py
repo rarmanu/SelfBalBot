@@ -1,7 +1,6 @@
 """
 Python MQTT Subscription client
 Thomas Varnish (https://github.com/tvarnish), (https://www.instructables.com/member/Tango172)
-Written for my Instructable - "How to use MQTT with the Raspberry Pi and ESP8266"
 """
 import paho.mqtt.client as mqtt
 import paho.mqtt.publish as publish
@@ -40,9 +39,7 @@ def on_message(client, userdata, msg):
     if msg.topic == mqtt_topic_log:
         print("Topic: ", msg.topic + " " + str(msg.qos) + "\nMessage: " + str(msg.payload))
     
-        
-    
-    
+     
     print("Topic: ", msg.topic + " " + str(msg.qos) + "\nMessage: " + str(msg.payload))
     
     # The message itself is stored in the msg variable
